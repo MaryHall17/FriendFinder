@@ -1,0 +1,28 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "An app to help you find compatible friends.",
+  "main": "index.js",
+  "scripts": {
+    "test": "Hello world"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaryHall17/FriendFinder.git"
+  },
+  "keywords": [
+    "Friend",
+    "Finder"
+  ],
+  "author": "Mary Hall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaryHall17/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/MaryHall17/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
