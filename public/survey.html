@@ -202,7 +202,7 @@
 
 			<div>
 				<a href="api/FreindsList">API Friends Link</a>
-				<a href="github">GitHub Repo</a>
+				<a href="/github">GitHub Repo</a>
 			</div>
 		</div>
 	<!--Jquery links-->
@@ -210,6 +210,49 @@
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<!--Link to JavaScript-->
-	<script src="../app/data/friends.js"></script>
+	<!-- <script src="../app/data/friends.js"></script> -->
 	</body>
+
+	<script type="text/javascript">
+
+
+	$("#submit-survey").on("click", function(event) {
+		event.preventDefault();
+		var newFriend = {
+			"name": $("#friend-name").val(),
+			"photo": $("#photo-link").val(),
+			"score": [$("#Q1").val(), 
+					$("#Q2").val(),
+					$("#Q3").val(),
+					$("#Q4").val(),
+					$("#Q5").val(),
+					$("#Q6").val(),
+					$("#Q7").val(),
+					$("#Q8").val(),
+					$("#Q9").val(),
+					$("#Q10").val()
+
+				]
+
+		};
+		console.log(newFriend);
+		
+		// friendArray.push(newFriend);
+		// console.log(friendArray);
+
+		// $("#friend-name").val("");
+		// $("#photo-link").val("");
+		// $("#Q1").val("");
+		// $("#Q2").val("");
+		// $("#Q3").val("");
+		// $("#Q4").val("");
+		// $("#Q5").val("");
+		// $("#Q6").val("");
+		// $("#Q7").val("");
+		// $("#Q8").val("");
+		// $("#Q9").val("");
+		// $("Q10").val("");
+
+	});
+</script>
 </html>
