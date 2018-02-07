@@ -14,9 +14,11 @@ module.exports = function(app) {
 		res.json(true);
 	});
 
+
+
 };
 
-console.log(friendsArray);
+
 
 // console.log(module.exports);
 

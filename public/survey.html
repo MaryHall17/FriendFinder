@@ -240,10 +240,10 @@
 		console.log(newFriend);
 		
 
-		$.post("/api/friends", newFriend);
-			// function() {
-			// 	console.log("it posted something");
-			// }
+		$.post("/api/friends", newFriend,
+			function() {
+				friendsArray.push(newFriend);
+			});
 
 		// $("#friend-name").val("");
 		// $("#photo-link").val("");
