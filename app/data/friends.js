@@ -22,7 +22,6 @@ $(document).ready(function() {
 	}
 ];
 
-console.log(friendsArray);
 	
 	$("#submit-survey").click(function(){
 		var Friends =  
@@ -45,5 +44,6 @@ console.log(friendsArray);
 		friendsArray.push(Friends);	
 		console.log(Friends);
 		console.log(friendsArray);
+		
 	})
 });
