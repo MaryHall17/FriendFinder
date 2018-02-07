@@ -201,7 +201,7 @@
 			</div>
 
 			<div>
-				<a href="api/FreindsList">API Friends Link</a>
+				<a href="/api/friends">API Friends Link</a>
 				<a href="/github">GitHub Repo</a>
 			</div>
 		</div>
@@ -217,6 +217,8 @@
 
 
 	$("#submit-survey").on("click", function(event) {
+		
+
 		event.preventDefault();
 		var newFriend = {
 			"name": $("#friend-name").val(),
@@ -237,8 +239,10 @@
 		};
 		console.log(newFriend);
 		
-		// friendArray.push(newFriend);
-		// console.log(friendArray);
+		friendsArray.push(newFriend);
+		console.log(friendsArray);
+
+		// module.exports = newFriend;
 
 		// $("#friend-name").val("");
 		// $("#photo-link").val("");

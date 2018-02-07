@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public/data"));
 
 //set up routes
-// require("./routing/apiRoutes")(app);
+require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
 
 
