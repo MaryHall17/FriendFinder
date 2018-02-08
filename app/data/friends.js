@@ -18,9 +18,7 @@
 	}
 ];
 
-for (i = 0; i < friendsArray[0].score.length; i++) {
-	console.log("this syntax works");
-}
+
 
 
 module.exports = friendsArray;
