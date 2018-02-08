@@ -196,7 +196,7 @@
 					
 
 					<!--Submit Button-->
-					<button class="btn btn-primary" id="submit-survey" type="button"> <i class="fa fa-check"></i>Submit</button>
+					<button class="btn btn-primary" id="submit-survey" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-check"></i>Submit</button>
 				</form>
 			</div>
 
@@ -205,6 +205,26 @@
 				<a href="/github">GitHub Repo</a>
 			</div>
 		</div>
+
+		<!--Modal-->
+		 <div class="modal fade" id="myModal" role="dialog">
+    		<div class="modal-dialog modal-lg">
+     		 <div class="modal-content">
+       			<div class="modal-header">
+          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+          			<h4 class="modal-title">Your Match!</h4>
+        		</div>
+       		 	<div class="modal-body">
+          			<p id="friend">Chrom is your friend.</p>
+          			<img src="https://serenesforest.net/forums/uploads/monthly_2017_09/4c33c83c64d9f1a34d4930288f9d56a3--anime-guys-fire-emblem-awakening.thumb.jpg.99fb6c98b50a49e16f850ca4c16dc3a6.jpg" id="friendPic">
+        		</div>
+        		<div class="modal-footer">
+          		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       	 </div>
+      </div>
+    </div>
+  </div>
+</div>
 	<!--Jquery links-->
 	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -240,10 +260,12 @@
 		console.log(newFriend);
 		
 
-		$.post("/api/friends", newFriend,
-			function() {
-				friendsArray.push(newFriend);
-			});
+		$.post("/api/friends", newFriend);
+			// function() {
+			// 	//Psuedo code for sending match to modal
+			// 	// $("friend").text("Your friend is " + friendName);
+			// 	// $("friendPic").attr("src", friendPhoto);
+			// });
 
 		$("#friend-name").val("");
 		$("#photo-link").val("");
